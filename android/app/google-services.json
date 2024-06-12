@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "357722059713",
+    "project_id": "dreamfarm-2b10f",
+    "storage_bucket": "dreamfarm-2b10f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357722059713:android:7aae126e46e41306357540",
+        "android_client_info": {
+          "package_name": "com.example.dreamfarm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQdjuN4PkESeLJPnfIL-p9iWedYBPnolY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
