@@ -21,5 +21,10 @@
   "communitySubTitle": "अन्य किसानों से जुड़ें, अनुभव साझा करें और सलाह प्राप्त करें।",
   "next": "अगला",
   "skip": "छोड़ें",
-  "continueText": "जारी रखें"
+  "continueText": "जारी रखें",
+  "profilePicture": "प्रोफ़ाइल तस्वीर",
+  "profilePictureDescription": "प्रोफ़ाइल तस्वीर अपलोड करें या चुनें",
+  "camera": "कैमरा",
+  "gallery": "गैलरी",
+  "selectFrom": "चुनें"
 }

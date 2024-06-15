@@ -63,6 +63,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
                   gravity: ToastGravity.TOP,
                   timeInSecForIosWeb: 2,
                   backgroundColor: resources.background);
+              Navigator.pushReplacementNamed(context, "/profilePicture");
             }
           },
           builder: (context, state) {

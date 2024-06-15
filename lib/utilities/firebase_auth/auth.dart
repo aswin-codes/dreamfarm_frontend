@@ -15,14 +15,20 @@ class Auth {
   }
 
   Future createUserWithEmailAndPassword(
-      {required String email, required String password}) async {
+      {required String email,
+      required String password}) async {
     UserCredential userCredential = await _firebaseAuth
         .createUserWithEmailAndPassword(email: email, password: password);
+
     return userCredential;
   }
 
   Future sendResetPasswordLink(String email) async {
     await _firebaseAuth.sendPasswordResetEmail(email: email);
+  }
+
+  Future updateProfilePicture(String url) async {
+    await _firebaseAuth.currentUser!.updatePhotoURL(url);
   }
 
   Future<void> signOut() async {

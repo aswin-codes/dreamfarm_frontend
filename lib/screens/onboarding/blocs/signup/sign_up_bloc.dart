@@ -32,9 +32,9 @@ class SignUpBloc extends Bloc<SignUpEvent, SignUpState> {
       SignUpButtonClickedEvent event, Emitter<SignUpState> emit) async {
     emit(SignUpLoadingState());
     try {
-      await Future.delayed(Duration(seconds: 1));
       await _signUpRepository.createAccount(
           event.fullName, event.email, event.password, event.phoneNumber);
+      emit(SignUpSuccessState());
     } on CustomException catch (e) {
       emit(SignUpErrorState(message: e.message, code: e.code));
     }

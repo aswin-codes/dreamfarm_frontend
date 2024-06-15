@@ -26,7 +26,7 @@ class _SplashScreenState extends State<SplashScreen> {
       listener: (context, state) {
         // TODO: implement listener
         if (state is NavigateToInfoScreen) {
-          Navigator.pushReplacementNamed(context, "/signup");
+          Navigator.pushReplacementNamed(context, "/info");
         }
       },
       child: Scaffold(

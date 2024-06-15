@@ -21,5 +21,10 @@
   "communitySubTitle" : "Connect with other farmers, share experiences, and get advice.",
   "next": "Next",
   "skip" : "Skip",
-  "continueText": "Continue"
+  "continueText": "Continue",
+  "profilePicture" : "Profile Picture",
+  "profilePictureDescription" : "Upload or select a profile picture",
+  "camera": "Camera",
+  "gallery": "Gallery",
+  "selectFrom" : "Select from"
 }

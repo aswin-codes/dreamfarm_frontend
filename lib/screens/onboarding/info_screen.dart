@@ -60,7 +60,7 @@ class _InfoScreenState extends State<InfoScreen> {
               ],
             ),
             Positioned(
-                bottom: 150,
+                bottom: 120,
                 child: SizedBox(
                   width: MediaQuery.of(context).size.width,
                   child: Row(

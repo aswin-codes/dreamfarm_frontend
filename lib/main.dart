@@ -1,15 +1,19 @@
+import 'package:dreamfarm/screens/home/home_screen.dart';
 import 'package:dreamfarm/screens/onboarding/info_screen.dart';
+import 'package:dreamfarm/screens/onboarding/profile_picture_screen.dart';
 import 'package:dreamfarm/screens/onboarding/splash_screen.dart';
 import 'package:dreamfarm/utilities/languages/language_constants.dart';
 import 'package:dreamfarm/screens/onboarding/login_screen.dart';
 import 'package:dreamfarm/screens/onboarding/sign_up_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:dreamfarm/resources/resources.dart' as resources;
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 void main() async {
+  await dotenv.load();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   runApp(const MyApp());
@@ -64,9 +68,11 @@ class _MyAppState extends State<MyApp> {
             "/login": (context) => const LoginScreen(),
             "/signup": (context) => const SignUpScreen(),
             "/splash": (context) => const SplashScreen(),
-            "/info" : (context) => const InfoScreen()
+            "/info": (context) => const InfoScreen(),
+            "/profilePicture": (context) => const ProfilePictureScreen(),
+            "/home": (context) => const HomeScreen()
           },
-          initialRoute: "/info",
+          initialRoute: "/splash",
           locale: _locale,
           localizationsDelegates: AppLocalizations.localizationsDelegates,
           supportedLocales: AppLocalizations.supportedLocales,

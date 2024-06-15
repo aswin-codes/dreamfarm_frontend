@@ -63,15 +63,18 @@ class _LoginScreenState extends State<LoginScreen> {
                   gravity: ToastGravity.TOP,
                   timeInSecForIosWeb: 2,
                   backgroundColor: resources.background);
+              Navigator.pushNamedAndRemoveUntil(
+                  context, "/home", (route) => false);
             } else if (state is ForgotPasswordErrorState) {
               Fluttertoast.showToast(
                   msg: state.message,
                   gravity: ToastGravity.TOP,
                   timeInSecForIosWeb: 2,
                   backgroundColor: resources.errorRed);
-            } else if (state is ForgotPasswordSuccessState){
+            } else if (state is ForgotPasswordSuccessState) {
               Fluttertoast.showToast(
-                  msg: "A password reset link has been sent to your registered email. Reset the password and try again.",
+                  msg:
+                      "A password reset link has been sent to your registered email. Reset the password and try again.",
                   textColor: resources.dark,
                   gravity: ToastGravity.TOP,
                   timeInSecForIosWeb: 2,

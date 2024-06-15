@@ -16,7 +16,7 @@ class LanguageWidget extends StatelessWidget {
         underline: const SizedBox(),
         icon: const Icon(
           Icons.language,
-          color: resources.background,
+          color: resources.primary,
         ),
         onChanged: (Language? language) async {
           // TODO: to call change language method
