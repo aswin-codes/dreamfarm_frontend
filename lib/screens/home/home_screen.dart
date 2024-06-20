@@ -1,4 +1,5 @@
 import 'package:dreamfarm/utilities/firebase_auth/auth.dart';
+import 'package:dreamfarm/utilities/session_manager/session_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:dreamfarm/resources/resources.dart' as resources;
 
@@ -17,6 +18,7 @@ class HomeScreen extends StatelessWidget {
         child: ElevatedButton(
             onPressed: () async {
               await Auth().signOut();
+              await SessionManager().clearData();
               Navigator.of(context)
                   .pushNamedAndRemoveUntil("/splash", (route) => false);
             },

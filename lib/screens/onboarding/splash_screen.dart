@@ -1,4 +1,5 @@
 import 'package:dreamfarm/screens/onboarding/blocs/splash/splash_bloc.dart';
+import 'package:dreamfarm/utilities/session_manager/session_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:dreamfarm/resources/resources.dart' as resources;
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -16,6 +17,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     // TODO: implement initState
     splashBloc.add(SplashInitialEvent());
+    SessionManager sm = SessionManager();
     super.initState();
   }
 

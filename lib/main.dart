@@ -5,6 +5,7 @@ import 'package:dreamfarm/screens/onboarding/splash_screen.dart';
 import 'package:dreamfarm/utilities/languages/language_constants.dart';
 import 'package:dreamfarm/screens/onboarding/login_screen.dart';
 import 'package:dreamfarm/screens/onboarding/sign_up_screen.dart';
+import 'package:dreamfarm/utilities/session_manager/session_manager.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_dotenv/flutter_dotenv.dart';
@@ -15,6 +16,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 void main() async {
   await dotenv.load();
   WidgetsFlutterBinding.ensureInitialized();
+  await SessionManager().init();
   await Firebase.initializeApp();
   runApp(const MyApp());
 }
